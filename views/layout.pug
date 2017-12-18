@@ -1,7 +1,228 @@
 doctype html
-html
+html(lang="en")
   head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    meta(name="description" content="")
+    meta(name="author" content="")
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon" href='/images/favicon.ico')
+    link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/stylesheets/icomoon.min.css")
+    link(rel="stylesheet" href="/stylesheets/swiper.min.css")
+    link(rel="stylesheet" href="/stylesheets/style.min.css")
+    link(rel="stylesheet" href="/stylesheets/google-fonts.css")
+    link(rel="stylesheet" href="/stylesheets/jasny-bootstrap.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css")
+    meta(name="csrf-token" content="{{ csrf_token() }}")
+    style(type="text/css").
+      .panel-group {
+      margin: 0;
+      text-align: left
+      }
+      @media screen and (max-width:991px) {
+      .panel-group {
+      margin-top: 5rem
+      }
+      }
+      .site-holder .sticky-header {
+      z-index: 99999!important;
+      background: #2b8dd9
+      }
+      .panel-group .panel-title {
+      border-radius: .25rem
+      }
+      .panel-group .panel-title,
+      .panel-group .panel-title a {
+      color: #fff;
+      font-family: inherit;
+      display: block;
+      width: 100%
+      }
+      .panel-group .panel-title a {
+      padding: .75rem 3.125rem .625rem 1.25rem;
+      border: none;
+      transition: .3s linear;
+      transition-property: background-color;
+      position: relative;
+      font-size: 1.25rem;
+      font-weight: 400;
+      border-radius: .25rem
+      }
+      @media screen and (max-width:1199px) {
+      .panel-group .panel-title a {
+      font-size: 1.2rem
+      }
+      }
+      @media screen and (max-width:767px) {
+      .panel-group .panel-title a {
+      font-size: 1rem;
+      padding-top: .9375rem;
+      padding-bottom: .9375rem
+      }
+      }
+      .panel-group .panel-title a span {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0;
+      margin: auto 0;
+      background: #fff;
+      text-indent: -62.5rem;
+      border-radius: 62.5rem;
+      transition: .3s linear;
+      transition-property: background;
+      display: block;
+      overflow: visible;
+      width: 1.563rem;
+      height: 1.563rem
+      }
+      .panel-group .panel-title a span:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(public/images/accordion-minus.png) 50% no-repeat;
+      background-size: .625rem .125rem
+      }
+      .panel-group .panel-title a.collapsed {
+      background-color: #4199dd
+      }
+      .panel-group .panel-title a.collapsed span {
+      background-color: hsla(0, 0%, 100%, .2)
+      }
+      .panel-group .panel-title a.collapsed span:before {
+      background: url(public/images/accordion-plus.png) 50% no-repeat;
+      background-size: .625rem .625rem
+      }
+      .panel-group .panel {
+      background: none;
+      border: none;
+      margin-bottom: .75rem;
+      border-radius: .25rem;
+      overflow: hidden;
+      display: block
+      }
+      .panel-group .panel-heading {
+      background-color: #297bbb !important;
+      border: none;
+      padding: 0;
+      margin: 0;
+      border-radius: .25rem .25rem 0 0
+      }
+      .panel-group .panel-collapse {
+      padding: 0;
+      background-color: #297bbb;
+      border-radius: 0 0 .25rem .25rem
+      }
+      .panel-group .panel-body-container {
+      padding: .625rem 1.0625rem 1.5625rem 1.25rem;
+      border-radius: 0 0 .25rem .25rem
+      }
+      .panel-group .panel-body {
+      border: none!important;
+      background-color: #297bbb;
+      color: #fff;
+      font-family: inherit;
+      border-radius: 0 0 .25rem .25rem;
+      letter-spacing: .00625rem;
+      padding: 0;
+      margin: 0;
+      max-height: 4.5rem;
+      min-height: 4.5rem;
+      position: relative;
+      height: 100%;
+      overflow: auto;
+      font-size: .813rem;
+      font-weight: 400;
+      line-height: 1.625rem
+      }
+      .panel-group .panel-body:before {
+      display: none
+      }
+      .panel-group .mCSB_inside>.mCSB_container {
+      margin-right: 3.75rem
+      }
+      .panel-group .mCSB_dragger_bar {
+      background: none;
+      border-radius: 0!important;
+      opacity: 1!important
+      }
+      .panel-group .mCSB_dragger_bar:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 80%;
+      width: 100%;
+      margin: auto 0;
+      display: block;
+      border-top: .1875rem solid #fff;
+      border-bottom: .1875rem solid #fff;
+      background: #2b8dd9
+      }
   body
     block content
+     #site-home.wrapper.preloader
+     
+    script(src="/js/jquery-1.12.4.min.js")
+    script(src="/js/loadingoverlay.min.js")
+    script(src="/js/swiper.jquery.min.js")
+    script(src="/js/modernizr-custom.min.js")
+    script(src="/js/imagesloaded.pkgd.min.js")
+    script(src="/js/hammer.min.js")
+    script(src="/js/sequence.min.js")
+    script(src="/js/tweetie.min.js")
+    script(src="/js/jquery.countimator.min.js")
+    script(src="/js/bootstrap.min.js")
+    script(src="/js/jquery.sticky.min.js")
+    script(src="/js/jquery.scrollUp.min.js")
+    script(src="/js/particles.min.js")
+    script(src="/js/style.min.js")
+    script(src="/js/particle.js")
+    script(src="/js/jquery.mCustomScrollbar.concat.min.js")
+    script(type="text/javascript").
+      $(document).ready(function(){
+      $('ul.tabs li').click(function(){
+      var tab_id = $(this).attr('data-tab');
+      $('ul.tabs li').removeClass('current');
+      $('.tab-content').removeClass('current');
+      $(this).addClass('current');
+      $("#"+tab_id).addClass('current');
+      })
+      $("#f-img").on({
+      mouseenter: function(){
+      $(this).attr('src','public/images/icon/blockchain-icons-whi.svg');
+      },
+      mouseleave: function(){
+      $(this).attr('src','/images/icon/blockchain-icons.svg');
+      }
+      });
+      $("#f-img1").on({
+      mouseenter: function(){
+      $(this).attr('src','/images/icon/crowdfunding-whi.svg');
+      },
+      mouseleave: function(){
+      $(this).attr('src','/images/icon/crowdfunding.svg');
+      }
+      });
+      $("#f-img2").on({
+      mouseenter: function(){
+      $(this).attr('src','/images/icon/wallet-whi.svg');
+      },
+      mouseleave: function(){
+      $(this).attr('src','/images/icon/wallet.svg');
+      }
+      });
+      })
+
+

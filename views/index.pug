@@ -1,5 +1,905 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+ html
+  body
+    section.site-holder(role="banner")
+      header.site-header
+        #sticky-header.sticky-header
+          .container
+            .row
+              .col-xs-8.col-sm-3
+                .site-logo
+                  a(href="index.html")
+                    img(src="/images/l2.svg" width="150" alt="Logo")
+              .col-xs-4.col-sm-9
+                nav#site-nav.site-nav(role="navigation")
+                  .nav-mobile
+                    i.fa.fa-bars.show
+                    i.fa.fa-close.hide
+                  ul.nav-off-canvas
+                    li
+                      a(href="#amazing-features") FEATURES
+                    li
+                      a(href="#site-service") SERVICES 
+                    li
+                      a(href="#site-product") PRODUCTS
+                    li
+                      a(href="#site-team") TEAM
+                    li
+                      a(href="#clients") CLIENTS
+                    li
+                      a(href="/careers") CAREERS
+        #header-slider.header-slider(style="position: relative;")
+          #particles-js
+          .row.container.seq-canvas.text-center
+            h1 Start business with Blockchain Solution
+            h2(style="font-weight: 300;")
+              | Blockchain Technologies, FinTech and Smart Contracts Development
+          .clearfix
+          .waveWrapper.waveAnimation
+            .waveWrapperInner.bgTop
+              .wave.waveTop(style="background-image: url('/images/wave-top.png')")
+            .waveWrapperInner.bgMiddle
+              .wave.waveMiddle(style="background-image: url('/images/wave-mid.png')")
+            .waveWrapperInner.bgBottom
+              .wave.waveBottom(style="background-image: url('/images/wave-bot.png')")
+    // AMAZING FEATURES
+    section#amazing-features.site-amazing-features.section-white
+      .container
+        .row
+          .col-xs-12
+            // H1 HEADING
+            h1
+              | Amazing 
+              strong Features
+            .row
+              .col-xs-12.col-sm-4
+                // FEATURE 1
+                .features.move.pos-rel
+                  // ICON
+                  figure
+                    img#f-img.wdth-set(src="/images/icon/blockchain-icons.svg")
+                  // H5 HEADING
+                  h5 Blockchain Development
+                  // PARAGRAPH
+                  p
+                    | Implement technologies to store immutable data to help you choosing which of your processes are suitable for this technology.
+              .col-xs-12.col-sm-4
+                // FEATURE 1
+                .features.pos-rel
+                  // ICON
+                  figure
+                    img#f-img1.wdth-set(src="/images/icon/crowdfunding.svg")
+                  // H5 HEADING
+                  h5 Crowdsale
+                  // PARAGRAPH
+                  p
+                    | Fund your product ideas with Initial Coin Offerings (ICO) on Ethereum. We can develop your Smart Contracts securely.
+              .col-xs-12.col-sm-4
+                // FEATURE 1
+                .features.move.pos-rel
+                  // ICON
+                  figure
+                    img#f-img2.wdth-set(src="/images/icon/wallet.svg")
+                  // H5 HEADING
+                  h5 Wallet
+                  // PARAGRAPH
+                  p
+                    | All of our wallets use industry standards of multi-sig (P2SH) for security and HD (BIP32) for financial privacy.
+              .col-xs-12
+                // Mobile PICTURE
+                figure.device
+                  img(src="/images/features-mobile.png" alt="Device")
+    // HOW IT WORKS
+    section#site-service.site-how-it-works.section-blue
+      .container-fluid.wide
+        .row
+          .col-xs-12
+            // H1 HEADING
+            h1
+              | LALA LABS 
+              strong Services
+            // START SLIDER
+            // Slider main container
+            .container
+              .row
+                .col-xs-12.col-sm-11.col-sm-offset-1
+                  #how-it-works-slider.swiper-container
+                    // Additional required wrapper
+                    ul.swiper-wrapper
+                      // Slides
+                      // SLIDE 1
+                      li.swiper-slide
+                        .row.d-fl
+                          .col-xs-12.col-sm-12.col-md-6
+                            // H5 HEADING
+                            h3 ICO CROWDFUNDING
+                            // PARAGRAPH
+                            p
+                              | Blockchain technology has enabled a new wave of crowdfunding that has overtaken venture capital funding in the past year. ICO's are quickly becoming the quintessential way for Blockchain based companies to raise funds for their projects, while creating a store of value in the process.
+                            // BOX
+                            .section.first
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/iicon-1.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Concept Building & Ideation
+                              // PARAGRAPH
+                              //
+                                <p> Lorem Ipsum is simply dummy text of the printing and typing
+                                indus try Lorem Ipsum has been the indus. </p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/iicon-2.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Deployment & Marketing Strategy
+                              // PARAGRAPH
+                              //
+                                <p>Simply dummy text of the printing and typing indus try Lorem
+                                Ipsum has been the indus try's standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/iicon-3.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Programming & Development
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/iicon-4.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Liquidation & Distribution of fund
+                          .col-xs-12.col-sm-12.col-md-6.pos-rel
+                            // DEVICE
+                            figure.device.devi
+                              img(src="/images/icon/ico-crowd.svg" alt="Device")
+                      // SLIDE 2
+                      li.swiper-slide
+                        .row.d-fl
+                          .col-xs-12.col-sm-12.col-md-6
+                            // H5 HEADING
+                            h3 HYPERLEDGER FABRIC 1.0
+                            // PARAGRAPH
+                            p
+                              | Blockchain is essentially a distributed ledger that provides transparency, security and immutability for all permissioned participants on the network, giving them real time access to all data and transactions. Block Gemini executes distributed ledgers on the latest Hyperledger Fabric 1.0.
+                            // BOX
+                            .section.first
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/hicon-1.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Digitized Ledger
+                              // PARAGRAPH
+                              //
+                                <p> Lorem Ipsum is simply dummy text of the printing and typing
+                                indus try Lorem Ipsum has been the indus. </p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="images/icons/hicon-2.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Real time data sharing
+                              // PARAGRAPH
+                              //
+                                <p>Simply dummy text of the printing and typing indus try Lorem
+                                Ipsum has been the indus try's standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/hicon-3.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Permission Based Access
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/hicon-4.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Multiple Channels
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/hicon-5.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Fully Customizable
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                          .col-xs-12.col-sm-12.col-md-6.pos-rel
+                            // DEVICE
+                            figure.device.devi
+                              img(src="/images/hyper.png" alt="Device")
+                      // SLIDE 4
+                      li.swiper-slide
+                        .row.d-fl
+                          .col-xs-12.col-sm-12.col-md-6
+                            // H5 HEADING
+                            h3 BLOCKCHAIN 2.0
+                            // PARAGRAPH
+                            p
+                              | Blockchain solutions based on Hyperledger and Ethereum Smart Contracts have tremendous potential to reshape multiple industries. LALA LABS is using Blockchain technology to help large corporations optimize their processes and reduce costs. Our innovative products and services give companies the cutting edge to set new standards in their respective markets.
+                            // BOX
+                            .section.first
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/bicon-1.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Decentralized Applications
+                              // PARAGRAPH
+                              //
+                                <p> Lorem Ipsum is simply dummy text of the printing and typing
+                                indus try Lorem Ipsum has been the indus. </p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/bicon-2.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Transparent Processes
+                              // PARAGRAPH
+                              //
+                                <p>Simply dummy text of the printing and typing indus try Lorem
+                                Ipsum has been the indus try's standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/bicon-3.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Immutable Data
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/bicon-4.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Permission Based Distributed Ledger
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                          .col-xs-12.col-sm-12.col-md-6.pos-rel
+                            // DEVICE
+                            figure.device.devi
+                              img(src="/images/n1.svg" alt="Device")
+                      // SLIDE 3
+                      li.swiper-slide
+                        .row.d-fl
+                          .col-xs-12.col-sm-12.col-md-6
+                            // H5 HEADING
+                            h3 ETHEREUM SMART CONTRACTS
+                            // PARAGRAPH
+                            p
+                              | Smart Contracts are a key component of Blockchain 2.0 that enables users to hard code agreements into digital protocols that self execute and enforce specified terms and conditions, without any external interference.
+                            // BOX
+                            .section.first
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/eicon-1.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Analyzing Product/Service
+                              // PARAGRAPH
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/eicon-2.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Proposing Blockchain Solutions
+                              // PARAGRAPH
+                              //
+                                <p>Simply dummy text of the printing and typing indus try Lorem
+                                Ipsum has been the indus try's standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/eicon-3.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Writing Whitepaper
+                              // PARAGRAPH
+                              //
+                                <p>Simply dummy text of the printing and typing indus try Lorem
+                                Ipsum has been the indus try's standard.</p>
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/eicon-4.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Token Creation
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/eicon-5.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Crowdsale Management
+                              // PARAGRAPH
+                              //
+                                <p>Ipsum is simply dummy text of the printing and typing indus
+                                try Lorem Ipsum has been the indus standard.</p>
+                          .col-xs-12.col-sm-12.col-md-6.pos-rel
+                            // DEVICE
+                            figure.device.ethSmart.devi
+                              img(src="/images/etherum-new.svg" alt="Device")
+                      // SLIDE 5
+                      li.swiper-slide
+                        .row.d-fl
+                          .col-xs-12.col-sm-12.col-md-6
+                            // H5 HEADING
+                            h3 DECENTRALIZED APPLICATIONS
+                            // PARAGRAPH
+                            p
+                              | DApps, or decentralized apps, can be built on the blockchain and offer a fast, organized, and secure approach to personal health.
+                            // BOX
+                            .section.first
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/icon-1.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Must be open sourced
+                              // PARAGRAPH
+                              p  DApps bring the decentralized blockchain to the global community. 
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/icon-2.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Data to be stored on a decentralized Blockchain
+                              // PARAGRAPH
+                              p Bitcoin and Ethereum are loosely considered DApps.
+                            // BOX
+                            .section
+                              // FIGURE
+                              figure
+                                span
+                                  img(src="/images/icons/icon-3.svg" alt="Device")
+                              // H4 HEADING
+                              h4 Contain tokens (such as Bitcoin or Ethereum)
+                              // PARAGRAPH
+                              p DApps, being decentralized, need a majority consensus to make votes.
+                          .col-xs-12.col-sm-12.col-md-6.pos-rel
+                            // DEVICE
+                            figure.device.devi
+                              img(src="/images/d-app.png" alt="Device")
+            // If we need navigation buttons
+            #how-it-works-prev.swiper-button-prev
+              i.fa.fa-angle-up.hidden-xs
+              span.icon-play-flip.visible-xs
+            #how-it-works-next.swiper-button-next
+              i.fa.fa-angle-down.hidden-xs
+              span.icon-play.visible-xs
+            // If we need pagination
+            #how-it-works-paging.swiper-pagination(data-icons='[\
+            "fa fa-users",\
+            "fa fa-database",\
+            "fa fa-cubes",\
+            "fa fa-file-text-o",\
+            "fa fa-openid",\
+            "icon-shopbag"\
+            ]')
+    // MORE FEATURES
+    #site-more-features.site-more-features.section-white
+      .container
+        .row
+          .col-sm-12
+            // heading
+            h1
+              | More 
+              strong Features
+          // clearfix
+          .clearfix
+          .col-xs-12.col-sm-12.col-md-4.col-md-push-4
+            // mobile image
+            figure.featured-img
+              img(src="/images/accordion-2.png" alt="Image")
+            // end
+          .col-xs-12.col-sm-12.col-md-4.col-md-pull-4
+            // feature 1
+            .feature.align-right
+              h5 Smart Contracts Development
+              p We can write your smart contract's code securely.
+              figure
+                span
+                  img.w-50(src="/images/icons/interphone.svg" alt="Icon")
+            // feature 2
+            .feature.align-right.move
+              h5 Smart Contracts Audit
+              p We help companies to make the best Smart Contract code.
+              figure
+                span
+                  img.w-50(src="/images/icons/contract.svg" alt="Icon")
+            // feature 3
+            .feature.align-right
+              h5 Exchanges
+              p Develop safe and reliable cryptocurrency exchanges.
+              figure
+                span
+                  img.w-50(src="/images/icon/exchange.svg" alt="Exchange")
+          .col-xs-12.col-sm-12.col-md-4
+            // feature 1
+            .feature.align-left
+              h5 Private Blockchain Development
+              p Implement a private blockchain in your institution or corporation.
+              figure
+                span
+                  img.w-50(src="/images/icons/mindmap.svg" alt="Icon")
+            // feature 2
+            .feature.align-left.move
+              h5 Training
+              p
+                | Teach team to understand the development on blockchain and be prepared for the next moves.
+              figure
+                span
+                  span
+                    img.w-50(src="/images/icons/class.svg" alt="Icon")
+            // feature 3
+            .feature.align-left
+              h5 APIs
+              p
+                | Simple and easy web APIs enable developers to build blockchain applications quickly.
+              figure
+                span
+                  span
+                    img.w-50(src="/images/icon/api.svg" alt="Icon")
+    // DOWNLOAD
+    section#site-product.site-download.section-blue
+      .container.mob-w-100
+        .row
+          .col-xs-12
+            // H1 HEADING
+            h1
+              | LALA LABS 
+              strong Products
+            .mt1
+              .text-left
+                ul.tabs
+                  li.tab-link.current(data-tab="tab-1") ICOs
+                  li.tab-link(data-tab="tab-2") Supply Chain
+                  li.tab-link(data-tab="tab-3") FinTech
+                  li.tab-link(data-tab="tab-4") RegTech
+                  li.tab-link(data-tab="tab-5") Healthcare
+                  li.tab-link(data-tab="tab-6") InsureTech
+                #tab-1.tab-content.current
+                  .row.t-mi
+                    .col-md-12.col-xs-12
+                      .col-md-2.col-xs-12
+                        img(src="/images/l-logo.png" alt="Image")
+                      .col-md-7.col-xs-12
+                        h2(style="color: #fff;") LALA World
+                        h4 Single payment Platform for all your financial needs
+                        p
+                          | The platform connects assets and businesses on blockchains to the real-world in a decentralized manner. Developers can develop security smart contract modules, businesses can connect their users and usecase to real-world payments.
+                      .col-md-3.col-xs-12.pos-rel.m-tp4
+                        p.trans
+                          .col-md-5 Blockchain: 
+                          .col-md-7
+                            a ETH (ERC20)
+                          .col-md-5 Symbol: 
+                          .col-md-7
+                            a LALA
+                          .col-md-5 website: 
+                          .col-md-7
+                            a(href="https://lalaworld.io/" target="_blank") lalaworld.io
+                          .col-md-5 Date: 
+                          .col-md-7
+                            a TBA
+                #tab-2.tab-content
+                  | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                #tab-3.tab-content
+                  | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                #tab-4.tab-content
+                  | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                #tab-5.tab-content
+                  | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                #tab-6.tab-content
+                  | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              // container
+    // QUICK VIEW
+    section#site-quick-view.site-quick-view.section-white
+      .container-fluid.wide
+        .row
+          .col-sm-12
+            h1
+              | Our 
+              strong Vision
+            .container
+              .row
+                .col-xs-6
+                  img.vision(src="/images/vision.png" alt="Vision")
+                .col-xs-6.text-left
+                  h2
+                    strong
+                      | WE BREATHE 
+                      span(style="color: #2b8dd9;") BLOCKCHAIN
+                  p
+                    | The applications of Blockchain have come a long way since its inception as the underlying technology powering Bitcoin. Many industries are starting to understand the advantages of Blockchain and how it can add value to their business processes. With a team of driven and highly experienced individuals in this space, Block Gemini is pioneering Blockchain solutions in various industries globally.
+                  p
+                    | The applications of Blockchain have come a long way since its inception as the underlying technology powering Bitcoin. Many industries are starting to understand the advantages of Blockchain and how it can add value to their business processes. With a team of driven and highly experienced individuals in this space, Block Gemini is pioneering Blockchain solutions in various industries globally.
+                  p
+                    | The applications of Blockchain have come a long way since its inception as the underlying technology powering Bitcoin. Many industries are starting to understand the advantages of Blockchain and how it can add value to their business processes. With a team of driven and highly experienced individuals in this space, Block Gemini is pioneering Blockchain solutions in various industries globally.
+    // ACCORDION
+    section#site-accordion.site-accordion.section-blue
+      .container
+        .row
+          .col-xs-12.col-md-6.col-md-push-6
+            figure.accordion-img
+              img(src="/images/accordion-5.png" alt="Image")
+          .col-xs-12.col-md-6.col-md-pull-6
+            // accordion
+            #accordion.panel-group
+              // section 1
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapse1")
+                      | QUICK RESPONDERS
+                      span icon
+                #collapse1.panel-collapse.collapse
+                  .panel-body-container
+                    .panel-body
+                      | We understand the time pressures of technology implementations and software development. Our team can efficiently integrate with yours to reach your goals.
+              // section 2
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title.active
+                    a(data-toggle="collapse" data-parent="#accordion" href="#collapse2")
+                      | CUSTOMIZABLE SOLUTIONS
+                      span icon
+                #collapse2.panel-collapse.collapse.in
+                  .panel-body-container
+                    .panel-body
+                      | The market does not offer software to fit every business’ needs. We can work with you to find the best way to do what you need done. Our thorough knowledge of currently available technology allows us to write your solution on top of existing software when designing something from scratch is unnecessary. CoinFabrik provides full stack services including Smart Contract development, back-ends implementing RESTful APIs, web Dapp front ends, and mobile applications written for iOS and Android.
+              // section 3
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapse3")
+                      | SECURITY EXPERTS
+                      span icon
+                #collapse3.panel-collapse.collapse
+                  .panel-body-container
+                    .panel-body
+                      | CoinFabrik's founders come from the software security industry. All team members are familiar with security threats and know how to develop secure Smart Contracts and secure code in general. We take pride in our carefully written code.
+              // section 4
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapse4")
+                      | CRYPTOCURRENCY SUPPORTERS
+                      span icon
+                #collapse4.panel-collapse.collapse
+                  .panel-body-container
+                    .panel-body
+                      | We have been playing with and working on blockchain development from the early stages. We use and accept Bitcoins. We believe in blockchain technology’s capacity to disrupt Fintech.
+            // end
+    // TEAM
+    section#site-team.site-team.section-white
+      .container-fluid.wide
+        .row
+          .col-sm-12
+            // heading
+            h1
+              | Innovative 
+              strong Team
+            // Slider main container
+            .container
+              .row
+                .col-xs-12
+                  #team-slider.swiper-container
+                    // Additional required wrapper
+                    ul.swiper-wrapper
+                      li.swiper-slide
+                        // box
+                        .site-box
+                          // image
+                          figure
+                            img(src="/images/deepoo.jpg" alt="User")
+                          // heading
+                          h5 Deepoo Gupta
+                          // description
+                          h6 Project Manager
+                          // paragraph
+                          p
+                            | Sr. Software Engineer at Techlites Solution, YouLogix Infotech Pvt. Ltd, YouLogix Infotech Pvt. Ltd.
+                          // social icons
+                          .site-social-icons
+                            a(href="https://www.linkedin.com/in/justdeepoo/" target="_blank")
+                              i.fa.fa-linkedin
+                      // slide 1
+                      li.swiper-slide
+                        // box
+                        .site-box
+                          // image
+                          figure
+                            img(src="/images/sankalp.jpg" alt="User")
+                          // heading
+                          h5 Sankalp Shangari
+                          // description
+                          h6 Founder & CEO
+                          // paragraph
+                          p
+                            | Deutsche, JP Morgan, InstantPay, Deep expertise in underbanked and payment systems, blockchain speaker, author
+                          // social icons
+                          .site-social-icons
+                            a(href="https://www.linkedin.com/in/sankalpshangari/" target="_blank")
+                              i.fa.fa-linkedin
+                      // slide 2
+                      li.swiper-slide
+                        // box
+                        .site-box
+                          // image
+                          figure
+                            img(src="/images/ranjit.jpg" alt="User")
+                          // heading
+                          h5 Ranjit Kumar
+                          // description
+                          h6 Chief Revenue Officer
+                          // paragraph
+                          p
+                            | JCB India Ltd, Polyplex,
+                            br
+                            |  Syscom Corporation,
+                            br
+                            |  Morpho Group
+                          // social icons
+                          .site-social-icons
+                            a(href="https://www.linkedin.com/in/ranjitlala/" target="_blank")
+                              i.fa.fa-linkedin
+                      // slide 3
+            // If we need navigation buttons
+            #team-prev.swiper-button-prev.hidden-lg
+              span.icon-play-flip
+            #team-next.swiper-button-next.hidden-lg
+              span.icon-play
+            // If we need pagination
+            #team-paging.swiper-pagination.visible-xs
+    // TESTIMONIAL
+    section#clients.site-testimonial.section-blue
+      .container-fluid.wide
+        .row
+          .col-sm-12
+            // quote
+            .testimonial-quote
+              span
+                i.fa.fa-handshake-o(aria-hidden="true")
+            h1.heading-inverse
+              | LALA LABS 
+              strong Clients
+            // Slider main container
+            .container
+              .row
+                .col-xs-12.col-md-12
+                  #testimonial-slider.swiper-container
+                    // Additional required wrapper
+                    ul.swiper-wrapper
+                      // slide 1
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.bestinet.com.my/" target="_blank")
+                          figure
+                            img(src="/images/clients/c-besti.png" alt="User")
+                      // slide 2
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.firstmobilewallet.net/" target="_blank")
+                          figure
+                            img(src="/images/clients/fmw.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="https://hiving.technology/" target="_blank")
+                          figure
+                            img(src="/images/clients/hiving.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.tasstech.com.my/" target="_blank")
+                          figure
+                            img(src="/images/clients/tass.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://cambridgejalandhar.in/" target="_blank")
+                          figure
+                            img(src="/images/clients/cambridge.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.efatoora.ae/" target="_blank")
+                          figure
+                            img(src="/images/clients/e-footra.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="https://veriff.me/" target="_blank")
+                          figure
+                            img(src="/images/clients/veriff.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.iomniscient.com/" target="_blank")
+                          figure
+                            img(src="/images/clients/iomniscient.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.clothesboxfoundation.org/" target="_blank")
+                          figure
+                            img(src="/images/clients/clothesboxfoundation.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="https://mlgblockchain.com/" target="_blank")
+                          figure
+                            img(src="/images/clients/mlgblockchain.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="https://www.toshblocks.com/" target="_blank")
+                          figure
+                            img(src="/images/clients/toshblocks.png" alt="User")
+                      li.swiper-slide
+                        // image
+                        a.box(href="http://www.weps.com.my/" target="_blank")
+                          figure
+                            img(src="/images/clients/weps.png" alt="User")
+            // If we need navigation buttons
+            #testimonial-prev.swiper-button-prev.hidden-lg
+              span.icon-play-flip
+            #testimonial-next.swiper-button-next.hidden-lg
+              span.icon-play
+            // If we need pagination
+            #testimonial-paging.swiper-pagination
+    section#quick-support.site-quick-support.section-white
+      .container
+        .row
+          .col-xs-12
+            // H1 HEADING
+            h1
+              | Contact 
+              strong Us
+            // INFO
+            .site-info
+              // BOX
+              a.site-box
+                // ICON
+                figure
+                  i.fa.fa-location-arrow
+                // PARAGRAPH
+                p Singapore | India | Malaysia | Dubai
+              // BOX
+              a.site-box
+                // ICON
+                figure
+                  i.fa.fa-map-marker
+                // ADDRESS
+                address 190 Clemenceau Avenue, #06-11, Singapore 239924
+              // BOX
+              a.site-box.last(href="mailto:hello@lalaworld.io")
+                // ICON
+                figure
+                  i.fa.fa-envelope
+                // Mail
+                p hello@lalaworld.io
+            // CONTACT FORM
+            form#myForm.site-contact-form(action="#" method="post")
+              table
+                tbody
+                  tr
+                    td(width="380")
+                      label
+                        input.app-btn.value-clear(type="text" name="app_name" placeholder="Name" required="required")
+                    td(width="380")
+                      label
+                        input.app-btn.value-clear(type="email" name="app_email" placeholder="Email" required="required")
+                    td(rowspan="2" width="380")
+                      label.last
+                        textarea.app-btn.value-clear(name="app_message" placeholder="Message" required="required")
+                  tr
+                    td(width="380")
+                      label
+                        input.app-btn.value-clear(type="tel" name="app_phone" placeholder="Phone" required="required")
+                    td(width="380")
+                      label
+                        input.app-btn.value-clear(type="url" name="app_website" placeholder="Website")
+                  tr
+                    td(colspan="3")
+                      label.move
+                        button#form-submit-btn.app-btn(type="submit")
+                          | Submit 
+                          i.fa.fa-spin.fa-spinner
+                          
+
+    section.site-subscribe
+      .container
+        .row
+          .col-xs-12
+            // BOX
+            .site-box
+              .row
+                .col-xs-12.col-sm-12.col-md-12.col-lg-6.no-space
+                  // PARAGRAPH
+                  p Subscribe to our Newsletter
+                  // END PARAGRAPH
+                .col-xs-12.col-sm-12.col-md-12.col-lg-6.no-space
+                  // FORM
+                  form.site-form(action="#" method="post")
+                    label
+                      input(type="email" placeholder="" required="required")
+                    input(type="submit" value="SUBMIT")
+                  // END FORM
+    // FOOTER
+    footer.site-footer
+      .container
+        .row
+          .col-xs-12
+            // LOGO
+            .site-logo
+              a(href="index.html")
+                img(src="/images/l2.svg" alt="Logo")
+            // END LOGO
+            // SOCIAL ICONS
+            .site-social-icons
+              a(target="_blank" href="#")
+                i.fa.fa-twitter(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-facebook(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-linkedin(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-instagram(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-reddit(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-medium(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-telegram(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-slack(aria-hidden="true")
+              a(target="_blank" href="#")
+                i.fa.fa-youtube(aria-hidden="true")
+            // END SOCIAL ICONS
+            // COPYRIGHT
+            .site-copyright
+              p © Copyright 2017. Designed by LALA Labs
+
